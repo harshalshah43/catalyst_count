@@ -1,6 +1,8 @@
 {%extends 'base.html'%}
 {%load crispy_forms_tags%}
 {%block content%}
+<!-- JQuery - autosuggest -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <h1>Filter Companies</h1>
 <div class="content-section">
     <form id="filterForm" onsubmit="fetchCount(event)">
@@ -21,4 +23,6 @@
     });
   } );
   </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 {%endblock content%}
