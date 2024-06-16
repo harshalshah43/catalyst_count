@@ -76,7 +76,7 @@ def bulk_insert_from_csv(file_id, batch_size=50000):
 
 def auto_complete(request):
     if 'term' in request.GET:
-        qs = Company.objects.filter(name__icontains=request.GET.get('term'))
+        qs = Company.objects.filter(name__icontains=request.GET.get('term'))[:8]
         names = []
         for company in qs:
             names.append(company.name)
